@@ -55,7 +55,7 @@ public class calendar {
 
 		      // Figure out how many days to print for the month.
 
-		      days_to_print = month_days[ month ];
+		      days_to_print = month_days[ month - 1 ];
 		      if (month == 2) {
 		        // Check for a leap year
 		        if ( (year % 4) == 0 ) {
@@ -69,7 +69,7 @@ public class calendar {
 
 		      // Print the rest of the month.
 
-		      for (i = 0; i <= days_to_print; i++) {
+		      for (i = 1; i <= days_to_print; i++) {
 		        System.out.printf ("%2d ", i);
 		        if ( (i + day_of_week - 1) % 7 == 6) {
 		          System.out.println ("");
